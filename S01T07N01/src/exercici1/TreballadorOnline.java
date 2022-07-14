@@ -21,7 +21,22 @@ public class TreballadorOnline extends Treballador {
 	@Override
 	public double calcularSou(int nHores) {
 
-		return (nHores * this.getPreuHora()) + this.tarifaInternet;
+		return (nHores * this.getPreuHora()) + TreballadorOnline.tarifaInternet;
+	}
+	
+	@Deprecated
+	public static void metodeObsolet() {
+		System.out.println("Soc un metode obsolet de la classe TreballadorOnline");
 	}
 
 }
+
+/*
+ * Afegeix a les classes filles alguns mètodes obsolets (deprecated), i utilitza
+ * l’anotació corresponent. Invoca des d'una classe externa els mètodes
+ * obsolets, suprimint mitjançant l'anotació corresponent els “warnings” per ser
+ * obsolets.
+ * 
+ * 
+ * 
+ */

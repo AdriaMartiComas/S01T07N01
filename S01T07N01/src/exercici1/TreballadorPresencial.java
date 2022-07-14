@@ -25,7 +25,12 @@ public class TreballadorPresencial extends Treballador {
 
 	@Override
 	public double calcularSou(int nHores) {
-		return (nHores*this.getPreuHora()) + this.benzina;
+		return (nHores*this.getPreuHora()) + TreballadorPresencial.benzina;
+	}
+	
+	@Deprecated
+	public static void metodeObsolet() {
+		System.out.println("Soc un metode obsolet de la classe TreballadorPresencial");
 	}
 
 
